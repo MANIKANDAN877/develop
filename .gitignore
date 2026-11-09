@@ -1,0 +1,27 @@
+# Node
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+
+# Python
+backend/.venv/
+**/__pycache__/
+**/.pytest_cache/
+**/*.py[cod]
+backend/.coverage
+backend/*.db
+
+# Environment
+.env
+.env.*
+.env.local
+**/.env
+**/.env.*
+!**/.env.example
+!**/.env.example.*
+*.pem
+*.key
+*.crt
+
+# OS
+.DS_Store

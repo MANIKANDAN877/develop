@@ -1,0 +1,29 @@
+services:
+  - type: web
+    name: paypal-fraud-backend
+    env: python
+    region: oregon
+    plan: free
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /health
+    envVars:
+      - key: APP_ENV
+        value: production
+      - key: ALLOW_LOCAL_DEV_UNAUTH
+        value: "false"
+      - key: PAYPAL_MODE
+        value: sandbox
+      - key: PAYPAL_API_BASE
+        value: https://api-m.sandbox.paypal.com
+      - key: PAYPAL_WEB_BASE
+        value: https://www.sandbox.paypal.com
+      - key: SARVAM_API_BASE
+        value: https://api.sarvam.ai
+      - key: SARVAM_MODEL
+        value: sarvam-105b
+      - key: SESSION_TOKEN_TTL_MINUTES
+        value: "120"
+      - key: RATE_LIMIT_PER_MINUTE
+        value: "60"
