@@ -16,8 +16,6 @@ This project is prepared for deployment without changing the working application
 - `APP_ENV=production`
 - `ALLOW_LOCAL_DEV_UNAUTH=false`
 - `AUTH_SECRET_KEY=<strong-random-secret>`
-- `DASHBOARD_USERNAME=<dashboard-user>`
-- `DASHBOARD_PASSWORD=<strong-dashboard-password>`
 - `SESSION_TOKEN_TTL_MINUTES=120`
 - `RATE_LIMIT_PER_MINUTE=60`
 - `FRONTEND_URL=https://<frontend-domain>`

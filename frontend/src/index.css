@@ -278,6 +278,30 @@ select {
   margin-bottom: 20px;
 }
 
+.balance-panel {
+  min-height: 200px;
+}
+
+.balance-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.balance-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.12);
+  color: #dfeeff;
+}
+
+.balance-row span {
+  color: #9fb4d1;
+}
+
 .amount-block,
 .status-stack {
   display: flex;
@@ -460,6 +484,11 @@ tbody tr:hover {
 .empty-state {
   color: #cfe3ff;
   margin: 12px 0 0;
+}
+
+.error-message {
+  color: #fca5a5;
+  margin: 0;
 }
 
 @media (max-width: 900px) {
